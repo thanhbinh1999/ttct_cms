@@ -1,0 +1,37 @@
+{
+    "name": "kuroneko/core",
+    "description": "Platform base on laravel framework",
+    "type": "project",
+    "require": {
+        "botble/assets": "^1.0",
+        "guzzlehttp/guzzle": "^6.3",
+        "php-amqplib/php-amqplib": "^2.10",
+        "sentry/sentry-laravel": "^1.4",
+        "ext-gd": "*",
+        "kuroneko/elastic-search": "dev-master",
+        "kuroneko/data-provider": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Giang Nguyen",
+            "email": "giangnguyen.neko.130@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {"Kuroneko\\Core\\": "./app"}
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:meta"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["Kuroneko\\Core\\Providers\\CoreServiceProvider"]
+        }
+    }
+}

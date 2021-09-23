@@ -1,0 +1,31 @@
+{
+    "name": "kuroneko/{module}",
+    "description": "Platform base on laravel framework",
+    "type": "project",
+    "require": {
+        "kuroneko\/core": "*@dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Giang Nguyen",
+            "email": "giangnguyen.neko.130@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {"Kuroneko\\{Module}\\": "./app"}
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:meta"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["Kuroneko\\{Module}\\Providers\\{Module}ServiceProvider"]
+        }
+    }
+}

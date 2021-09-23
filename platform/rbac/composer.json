@@ -1,0 +1,32 @@
+{
+    "name": "kuroneko/rbac",
+    "description": "Platform base on laravel framework",
+    "type": "project",
+    "require": {
+        "kuroneko\/core": "*@dev",
+        "spatie/laravel-permission": "^3.6"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Giang Nguyen",
+            "email": "giangnguyen.neko.130@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {"Kuroneko\\Rbac\\": "./app"}
+    },
+    "scripts": {
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:meta"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": ["Kuroneko\\Rbac\\Providers\\RbacServiceProvider"]
+        }
+    }
+}

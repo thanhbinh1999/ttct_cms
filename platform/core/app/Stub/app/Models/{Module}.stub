@@ -1,0 +1,11 @@
+<?php
+namespace Kuroneko\{Module}\Providers;
+
+use Illuminate\Database\Eloquent\Model;
+
+class {Module} extends Model
+{
+    protected $fillable = [
+        //define your model attribute here
+    ];
+}

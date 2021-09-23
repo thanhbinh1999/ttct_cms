@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Color Picker With Predefined Colors Examples</title>
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<style>
+  html,* { font-family: 'Roboto Condensed'; }
+  body { background-color: #fafafa; }
+  .container { margin: 150px auto; max-width: 960px; }
+  </style>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script type="text/javascript" src="../src/jquery.simple-color.js"></script>
+
+<script  type="text/javascript">
+$(document).ready(function(){
+
+  $('.close_button').click(function(event) {
+    $('input').closeChooser();
+  });
+
+  $('.set_color_button').click(function(event) {
+    $('input').setColor('#cc3333');
+  });
+
+  $('.simple_color').simpleColor();
+
+  $('.simple_color_show_input').simpleColor({ hideInput: false, inputCSS: { 'border-style': 'dashed', 'width': '111px', 'margin-bottom': '2px' } });
+
+  $('.simple_color_color_code').simpleColor({ displayColorCode: true });
+
+  $('.simple_color_custom_chooser_css').simpleColor({ chooserCSS: { 'background-color': 'black', 'opacity': '0.8' } });
+
+  $('.simple_color_custom_display_css').simpleColor({ displayCSS: { 'border': '1px solid red' } });
+
+  $('.simple_color_custom_cell_size').simpleColor({ cellWidth: 30, cellHeight: 10 });
+
+  $('.simple_color_live_preview').simpleColor({ livePreview: true });
+
+  $('.simple_color_callback').simpleColor({
+    onSelect: function(hex, element) {
+      alert("You selected #" + hex + " for input #" + element.attr('class'));
+    }
+  });
+
+  $('.simple_color_mouse_enter').simpleColor({
+    onCellEnter: function(hex, element) {
+      console.log("You just entered #" + hex + " for input #" + element.attr('class'));
+    }
+  });
+
+  $('.simple_color_kitchen_sink').simpleColor({
+    boxHeight: 40,
+    cellWidth: 20,
+    cellHeight: 20,
+    chooserCSS: { 'border': '1px solid #660033' },
+    displayCSS: { 'border': '1px solid red' },
+    displayColorCode: true,
+    livePreview: true,
+    onSelect: function(hex, element) {
+     // alert("You selected #" + hex + " for input #" + element.attr('class'));
+    },
+    onCellEnter: function(hex, element) {
+     // console.log("You just entered #" + hex + " for input #" + element.attr('class'));
+    },
+    onClose: function(element) {
+    //  alert("color chooser closed for input #" + element.attr('class'));
+    }
+  });
+
+});
+</script>
+</head>
+
+<body><div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="https://www.jqueryscript.net/time-clock/hijri-date-picker-bootstrap.html">Download This Plugin</a></li>
+<li><a href="https://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul><div id="carbon-block"></div>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+  <div class="container">
+    <h1>Color Picker With Predefined Colors Examples</h1>
+  <button class='close_button'>Close all color choosers</button>
+  <button class='set_color_button'>Set all to red</button>
+
+  <h3>Basic</h3>
+  <input class='simple_color' value='#cc3333'/>
+
+  <h3>Display input field and customize field CSS</h3>
+  <input class='simple_color_show_input' value='#cc3333'/>
+
+  <h3>Display Color Code</h3>
+  <input class='simple_color_color_code' value='#33cc33'/>
+
+  <h3>Custom Color Chooser CSS</h3>
+  <input class='simple_color_custom_chooser_css' value='#ff6633'/>
+
+  <h3>Custom Color Display CSS</h3>
+  <input class='simple_color_custom_display_css' value='#ccffff'/>
+
+  <h3>Custom Cell Size</h3>
+  <input class='simple_color_custom_cell_size' value='#cc9966'/>
+
+  <h3>With Live Preview</h3>
+  <input class='simple_color_live_preview' value='#ff00ff'/>
+
+  <h3>With Callback</h3>
+  <input class='simple_color_callback' value='#cc3333'/>
+
+  <h3>With Mouse Entry Events (see javascript console)</h3>
+  <input class='simple_color_mouse_enter' value='#336600'/>
+
+  <h3>Kitchen Sink</h3>
+  <input class='simple_color_kitchen_sink' value='#993300'/>
+</div>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
+</body>
+</html>

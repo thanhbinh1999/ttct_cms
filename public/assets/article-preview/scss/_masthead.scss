@@ -1,0 +1,7 @@
+.masterHeader { height: calc(100vh - 140px); display: flex; position: relative; overflow: hidden; }
+.masterHeader .outer-header { margin: auto 0; width: 100%; position: relative; z-index: 2;}
+.masterHeader .inner-header { width: 80%;}
+.masterHeader h1 {  font-family: Taviraj,serif;  font-weight: 900;  font-size: 4rem; line-height: 1.25; color: #000; margin-bottom: 40px;}
+.masterHeader p { font-family: 'Noto Serif',serif; font-size: 1.35rem; color: #000; width: 600px; }
+.img-topic { height: 100%; width: 100%; position: absolute; z-index: 1; background-size: cover; background-attachment: fixed;  background-position: top center;  background-repeat: no-repeat; filter: grayscale(100%);
+background-blend-mode:  var(--blend-top, normal), var(--blend-bottom, saturation), normal;   opacity: 0.3; }

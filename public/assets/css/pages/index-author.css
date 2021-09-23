@@ -1,0 +1,25 @@
+.paginationjs-pages ul li{
+list-style: none;
+float: left;
+width: 30px;
+height: 30px;
+margin: 1px;
+color:red;
+font-weight: bold;
+font-size: 18px;
+}
+.table tbody{
+color: #6c7293;
+}
+.update, .btn-delete{
+margin: 6px;
+font-size: 10px;
+
+}
+.update a , .btn-delete a{
+text-decoration: none;
+color: white;
+}
+.error{
+color:red;
+}

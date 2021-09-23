@@ -1,0 +1,19 @@
+<?php
+
+namespace Kuroneko\{Module}\Queues;
+
+use Kuroneko\Core\Queues\Abstracts\RabbitMQAbstract;
+
+class {Module}Queue extends RabbitMQAbstract
+{
+    public function __construct()
+    {
+        parent::__construct(
+            env('{MODULE}_QUEUE_HOST'),
+            env('{MODULE}_QUEUE_PORT'),
+            env('{MODULE}_QUEUE_USER'),
+            env('{MODULE}_QUEUE_PASS'),
+            env('{MODULE}_QUEUE_VHOST')
+        );
+    }
+}
