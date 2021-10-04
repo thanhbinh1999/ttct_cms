@@ -187,9 +187,10 @@ Route::group(['middleware' => ['web', 'menu', 'auth'], 'namespace' => 'Kuroneko\
      */
     Route::prefix('kho-bao-giay')->group(function () {
         Route::get('', 'AtexController@index')->name('ttct.kho_bao_giay_show');
-        Route::POST('Call-Api', 'AtexController@data')->name('ttct::kho-bao-giay_api');
-        Route::GET("transfer-draft", 'AtexController@transferDraft');
-        Route::GET('delete/{id}/page/{page}', 'AtexController@delete');
-        Route::POST("search", 'AtexController@search');
+        Route::post('Call-Api', 'AtexController@data')->name('ttct::kho-bao-giay_api');
+        Route::get("transfer-draft", 'AtexController@transferDraft');
+        Route::get('delete/{id}/page/{page}', 'AtexController@delete');
+        Route::post("search", 'AtexController@search');
     });
 });
+
