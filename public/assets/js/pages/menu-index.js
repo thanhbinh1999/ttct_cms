@@ -2227,7 +2227,7 @@ function () {
           autoHide: false,
           textAlign: 'left',
           template: function template(row) {
-            return "<strong>".concat(row.name, "</strong>");
+            return `<strong>${row.name}</strong>`;
           }
         }, {
           field: 'created_at',
