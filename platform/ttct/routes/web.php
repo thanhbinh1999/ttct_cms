@@ -194,3 +194,6 @@ Route::group(['middleware' => ['web', 'menu', 'auth'], 'namespace' => 'Kuroneko\
     });
 });
 
+Route::get('test', function(){
+   return phpinfo();
+});

@@ -161,7 +161,7 @@ class LoginController extends Controller
 //
 //            $mailer->sendSms($user->phone, $token);
 ////            $mailer->sendEmail($user->email, $msg);
-//
+// 
 //            session(['confirm_login' => [
 //                'user_id' => $user->id
 //            ]]);

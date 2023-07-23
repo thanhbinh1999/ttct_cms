@@ -96,8 +96,8 @@ class UserController extends Controller
                     $que->whereNotIn('id', [auth()->user()->id]);
                     return $que;
                 })
-                    ->skip(intval($pagination['page']) - 1)
-                    ->take($pagination['perpage']);
+                ->skip(intval($pagination['page']) - 1)
+                ->take($pagination['perpage']);
 
             if (!empty($sort))
                 $data = $data->orderBy($sort['field'], $sort['sort']);
@@ -290,7 +290,6 @@ class UserController extends Controller
                 $data['avatar_base_url'] = env('RESOURCE_BASE_URL') . DIRECTORY_SEPARATOR . env('RESOURCE_FOLDER');
 
                 $data['avatar'] = $avatar['absolute_url'];
-
             }
 
             $update = $this->userProcessor->updateDB(auth()->user()->id, $data);
@@ -341,7 +340,6 @@ class UserController extends Controller
                     $users->push($user->id);
                 });
             }
-
         }
         $class = get_class(auth()->user());
 
@@ -441,9 +439,9 @@ class UserController extends Controller
                     $que->where('notifiable_id', auth()->user()->id);
                     return $que;
                 })
-                    ->skip(intval($pagination['page']) - 1)
-                    ->take($pagination['perpage'])
-                    ->orderBy('created_at', 'desc');
+                ->skip(intval($pagination['page']) - 1)
+                ->take($pagination['perpage'])
+                ->orderBy('created_at', 'desc');
 
             $data = $data->get()->map(function ($item) {
                 $html = '<div class="kt-notification">';
@@ -452,12 +450,11 @@ class UserController extends Controller
                 $readAt = empty($item->read_at) ? null : $item->read_at;
 
                 switch ($notifyType) {
-                    case 'Kuroneko\User\Notifications\ArticleTransferNotification':
-                    {
-                        $text = $data['type'] == 'user' ? ('<strong>' . $data['from_user_username'] . '</strong> vừa ' . ($data['sb_or_fw'] == 1 ? 'chuyển một bài viết đến bạn' : 'trả lại một bài viết') . ': <strong>' . ($data['sb_or_fw'] == 1 ? $data['note'] : $data['article']) . '</strong>') : ('<strong>' . $data['from_user_username'] . '</strong> vừa chuyển một bài viết đến vai trò của bạn: <strong>' . $data['note'] . '</strong>');
-                        $time = $item->created_at->diffForHumans();
-                        $route = $data['sb_or_fw'] == 1 ? ($data['type'] == 'user' ? route('ttct.articles.article_for_me') : route('ttct.articles.article_send_by_role')) : route('ttct.articles.article_send_back');
-                        $html .= '<a href="' . $route . '" class="kt-notification__item" data-url="' . route('users.mark_as_read_notify', $item->id) . '">
+                    case 'Kuroneko\User\Notifications\ArticleTransferNotification': {
+                            $text = $data['type'] == 'user' ? ('<strong>' . $data['from_user_username'] . '</strong> vừa ' . ($data['sb_or_fw'] == 1 ? 'chuyển một bài viết đến bạn' : 'trả lại một bài viết') . ': <strong>' . ($data['sb_or_fw'] == 1 ? $data['note'] : $data['article']) . '</strong>') : ('<strong>' . $data['from_user_username'] . '</strong> vừa chuyển một bài viết đến vai trò của bạn: <strong>' . $data['note'] . '</strong>');
+                            $time = $item->created_at->diffForHumans();
+                            $route = $data['sb_or_fw'] == 1 ? ($data['type'] == 'user' ? route('ttct.articles.article_for_me') : route('ttct.articles.article_send_by_role')) : route('ttct.articles.article_send_back');
+                            $html .= '<a href="' . $route . '" class="kt-notification__item" data-url="' . route('users.mark_as_read_notify', $item->id) . '">
                         <div class="kt-notification__item-icon">
                             <i class="flaticon-interface-2 kt-font-success"></i>
                         </div>
@@ -470,12 +467,11 @@ class UserController extends Controller
                             </div>
                         </div>
                     </a>';
-                        break;
-                    }
-                    default:
-                    {
-                        break;
-                    }
+                            break;
+                        }
+                    default: {
+                            break;
+                        }
                 }
                 $html = $html .= '</div>';
                 return $html;
