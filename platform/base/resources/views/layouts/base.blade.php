@@ -47,9 +47,9 @@
     <link href="{{ asset('assets/vendors/custom/vendors/flaticon2/flaticon.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/vendors/custom/vendors/fontawesome5/css/all.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css')}}" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" type="text/css" href="{{asset('assets/css/dataTable/datatable.css')}}" />
+    <link rel="stylesheet"assets"text/css" href="{{asset('assets/css/dataTable/datatable.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/dataTable/datatable.min.css')}}" />
-    
+
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/dataTable/datatable-bootstrap.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/dataTable/datatable-bootstrap.min.css')}}" />
 
