@@ -176,12 +176,11 @@
 
     <script src="{{ asset('assets/js/pages/header.js') }}" type="text/javascript"></script>
 
-
-
     <!--end::Global App Bundle -->
 
 </body>
 
+<!-- end::Body -->
 <!-- end::Body -->
 
 </html>
