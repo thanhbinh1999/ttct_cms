@@ -47,7 +47,7 @@
     <link href="{{ asset('assets/vendors/custom/vendors/flaticon2/flaticon.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/vendors/custom/vendors/fontawesome5/css/all.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css')}}" rel="stylesheet" type="text/css">
-    <link rel="stylesheet"assets"text/css" href="{{asset('assets/css/dataTable/datatable.css')}}" />
+    <link rel="stylesheet" assets"text/css" href="{{asset('assets/css/dataTable/datatable.css')}}" />
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/dataTable/datatable.min.css')}}" />
 
     <link rel="stylesheet" type="text/css" href="{{asset('assets/css/dataTable/datatable-bootstrap.css')}}" />
@@ -155,7 +155,7 @@
     <script src="{{ asset('assets/vendors/general/toastr/build/toastr.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('assets/vendors/general/sweetalert2/dist/sweetalert2.min.js') }}" type="text/javascript"></script>
     <script src="{{ asset('assets/vendors/custom/components/vendors/sweetalert2/init.js') }}" type="text/javascript"></script>
-  
+
 
     @stack('plugin-js')
     <!--end:: Global Optional Vendors -->
@@ -177,12 +177,12 @@
 
     <script src="{{ asset('assets/js/pages/header.js') }}" type="text/javascript"></script>
 
-
-
     <!--end::Global App Bundle -->
 
 </body>
 
 <!-- end::Body -->
+<!-- end::Body -->
+<!-- end::removeClass -->
 
 </html>
