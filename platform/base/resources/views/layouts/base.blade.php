@@ -183,7 +183,6 @@
 
 <!-- end::Body -->
 <!-- end::Body -->
-<!-- end::Body -->
-<!-- end::Body -->
+<!-- end::endClass -->
 
 </html>
