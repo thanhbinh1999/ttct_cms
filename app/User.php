@@ -35,6 +35,5 @@ class User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-         'password','admin'  ,'token'
-    ];
+         'password','admin'  ,'token','image', 'avatar','docker','v12'];
 }
