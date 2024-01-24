@@ -186,4 +186,9 @@ php artisan kuroneko:env_generate --force
 If the /env/.<your-enviroment>.env is already exists and you just want to generate new application key, run this command   
 ```        
 php artisan kuroneko:key_generate        
-```        
+```
+### check the user login
+
+```
+ php artisan  user:login  --status={active, failed, pending} 
+```
