@@ -196,5 +196,5 @@ php artisan kuroneko:key_generate
 ### custom artisan in core folder
 
 ```
- php artisan custom --module={module name here} --status={active, pending}
+ php artisan  custom  --module={module name here} --status={active, pending}
 ```
